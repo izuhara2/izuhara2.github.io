@@ -76,7 +76,19 @@
             var light = new THREE.DirectionalLight(0xffffff);
             light.position.set(-2, 2, 2);
             scene.add(light);
+            
 
+             // 平行光源1
+            var directionalLight1 = new THREE.DirectionalLight(0xffffff);
+            directionalLight1.position.set(100, 100, 100);
+             // シーンに追加
+             scene.add(directionalLight1);
+              // 平行光源2
+              var directionalLight2 = new THREE.DirectionalLight(0xffffff);
+               directionalLight2.position.set(-100, 100, 100);
+              // シーンに追加
+               scene.add(directionalLight2);
+               
             //4.描画
             // 初回実行
             var update = function() {
