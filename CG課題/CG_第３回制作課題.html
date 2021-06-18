@@ -9,8 +9,8 @@
 
       function init() {
         // サイズを指定
-        const width = 1920;
-        const height = 1080;
+        const width = 960;
+        const height = 540;
 
         // レンダラーを作成
         const renderer = new THREE.WebGLRenderer({
@@ -51,7 +51,7 @@
         // 作成
         var geometry = new THREE.PlaneGeometry(75, 100);
         var dragon = new THREE.Mesh(geometry, mat);
-        dragon.position.set(100, 0, 100);
+        dragon.position.set(100, 0, 50);
         scene.add(dragon);
 
         // 木0テクスチャー読み込み
