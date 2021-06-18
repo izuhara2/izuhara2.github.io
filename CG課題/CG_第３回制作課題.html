@@ -54,16 +54,16 @@
         dragon.position.set(100, 0, 50);
         scene.add(dragon);
 
-        // 木0テクスチャー読み込み
-        var textureLoader = new THREE.TextureLoader();  
-        var texture0 = textureLoader.load("img/tree0.png");
-        var mat0 = new THREE.MeshLambertMaterial({transparent: true});
-        mat0.map = texture0;
-
-        // 木0を作成(原点に作成)
-        var geometry = new THREE.PlaneGeometry(75, 100);
-        var tree0 = new THREE.Mesh(geometry, mat0);
-        scene.add(tree0);
+        // 木をスプライトで作成
+        var textureLoader = new THREE.TextureLoader(); 
+        var texture = textureLoader.load("img/tree0.png");
+        const material = new THREE.SpriteMaterial({ map: texture,});
+        const sprite = new THREE.Sprite(material);
+        sprite.position.x = 0;
+        sprite.position.y = 0;
+        sprite.position.z = 0;
+        sprite.scale.set(100,100,100);
+        scene.add(sprite);
 
 
         tick();
