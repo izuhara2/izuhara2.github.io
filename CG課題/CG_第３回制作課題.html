@@ -9,8 +9,8 @@
 
       function init() {
         // サイズを指定
-        const width = 1920;
-        const height = 1080;
+        const width = 1024;
+        const height = 683;
 
         // レンダラーを作成
         const renderer = new THREE.WebGLRenderer({
@@ -42,21 +42,9 @@
         // シーンに追加
         scene.add(directionalLight2);
 
-        // テクスチャー読み込み
-        var textureLoader = new THREE.TextureLoader();  
-        var texture= textureLoader.load("img/impostor.png");
-        var mat = new THREE.MeshLambertMaterial({transparent: true});
-        mat.map = texture;
-
-        // 作成
-        var geometry = new THREE.PlaneGeometry(75, 100);
-        var impostor = new THREE.Mesh(geometry, mat);
-        impostor.position.set(100, -100, 50);
-        scene.add(impostor);
-
         // 対象をスプライトで作成
         var textureLoader = new THREE.TextureLoader(); 
-        var texture = textureLoader.load("img/tukue.png");
+        var texture = textureLoader.load("img/picture1.png");
         const material = new THREE.SpriteMaterial({ map: texture,});
         const sprite = new THREE.Sprite(material);
         sprite.position.x = 0;
