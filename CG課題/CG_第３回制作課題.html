@@ -54,14 +54,14 @@
         scene.add(sprite);
 
         // テクスチャー読み込み
-        const textureLoader = new THREE.TextureLoader(); 
-        const texture = textureLoader.load("img/yuka.png");
-        const mat = new THREE.MeshPhongMaterial();
+        var textureLoader = new THREE.TextureLoader(); 
+        var texture = textureLoader.load("img/yuka.png");
+        var mat = new THREE.MeshPhongMaterial();
         mat.map = texture;
     
         // 地面を作成
-        const plane = new THREE.GridHelper(300, 10, 0x888888, 0x888888);
-        const plane = new THREE.Mesh(geometry, mat);
+        var plane = new THREE.GridHelper(300, 10, 0x888888, 0x888888);
+        var plane = new THREE.Mesh(geometry, mat);
         plane.position.y = -10;
         scene.add(plane);
 
