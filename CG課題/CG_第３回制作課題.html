@@ -58,13 +58,11 @@
         var texture = textureLoader.load("img/yuka.png");
         var mat = new THREE.MeshPhongMaterial();
         mat.map = texture;
-    
-        // 地面を作成
-        var plane = new THREE.GridHelper(300, 10, 0x888888, 0x888888);
+        //地面の追加
+        var geometry =new THREE.PlaneGeometry (100,100,1,1);                                                    
         var plane = new THREE.Mesh(geometry, mat);
-        plane.position.y = -10;
-        scene.add(plane);
-
+        //シーンオブジェクトに追加
+        scene.add(plane);         
 
         tick();
         // 毎フレーム時に実行されるループイベントです
