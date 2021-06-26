@@ -59,7 +59,7 @@
         var mat = new THREE.MeshPhongMaterial();
         mat.map = texture;
         //地面の追加
-        var geometry =new THREE.PlaneGeometry (100,100,100,100);                                                    
+        var geometry =new THREE.PlaneGeometry (100,100,100,-1000);                                                    
         var plane = new THREE.Mesh(geometry, mat);
         plane.position.x = 0;
         plane.position.y = 0;
