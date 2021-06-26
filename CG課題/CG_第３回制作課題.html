@@ -52,10 +52,17 @@
         sprite.position.z = 0;
         sprite.scale.set(100,100,100);
         scene.add(sprite);
+
+        // テクスチャー読み込み
+        const textureLoader = new THREE.TextureLoader(); 
+        const texture = textureLoader.load("img/yuka.png");
+        const mat = new THREE.MeshPhongMaterial();
+        mat.map = texture;
     
         // 地面を作成
         const plane = new THREE.GridHelper(300, 10, 0x888888, 0x888888);
-        plane.position.y = -40;
+        const plane = new THREE.Mesh(geometry, mat);
+        plane.position.y = -10;
         scene.add(plane);
 
 
