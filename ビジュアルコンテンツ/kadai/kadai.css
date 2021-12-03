@@ -1,0 +1,17 @@
+﻿@charset "UTF-8";
+body{
+    /*文字フォントの指定*/
+    font-family: 'M PLUS 1 Code', sans-serif;
+    /*背景色の変更*/
+    background-color: rgb(198, 198, 206);
+}
+h1{
+    /*テキストの位置指定*/
+    text-align: center;
+}
+li{
+    font-size: 250%;
+}
+.homepage video{
+    width: 100%;
+}
