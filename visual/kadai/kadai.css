@@ -5,7 +5,7 @@ body {
 	font-family: 'M PLUS 1 Code', sans-serif;
 	font-family: 'Yuji Syuku', serif;
 	/*背景色の変更*/
-	background-color: rgb(70, 186, 194);
+	background-color: rgb(253, 253, 253);
 }
 
 h1 {
@@ -31,13 +31,26 @@ li {
 	width: 100%;
 }
 
-.intro{
+.intro {
 	background-color: #000000;
-	border-style: outset;
+	border-style: solid;
+	border-width: 8px;
+	border-color:rgba(243, 8, 8, 0.5);
+	width: 99%;
 }
-.intro p,h3 {
+
+.intro p,
+h3 {
 	color: #fff;
 	font-size: 150%;
+}
+
+.tel p {
+	font-size: 180%;
+}
+
+.meat p{
+	font-size: 180%;
 }
 
 /*メニューの作成*/
@@ -53,7 +66,7 @@ ul.topnav li {
 	float: left;
 }
 
-ul.topnav li a  {
+ul.topnav li a {
 	display: block;
 	padding: 14px 16px;
 	text-align: center;
@@ -107,6 +120,9 @@ li:nth-child(2) {
 	gap: 26px;
 	margin-top: 6%;
 	margin-bottom: 50px;
+	border-style: solid;
+	border-width: 8px;
+	border-color:rgb(0, 0, 0);
 }
 
 /*googlemapのレスポンシブ対応*/
@@ -132,8 +148,9 @@ li:nth-child(2) {
 	overflow: hidden;
 	opacity: 0.01;
 	animation: load 1.5s 0.8s ease-out forwards;
-  }
-  .container-video #video {
+}
+
+.container-video #video {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -144,26 +161,29 @@ li:nth-child(2) {
 	z-index: -1000;
 	overflow: hidden;
 	transform: translate(-50%, -50%) scale(1.05);
-  }
-  
-  @keyframes load {
+}
+
+@keyframes load {
 	100% {
-	  opacity: 1;
+		opacity: 1;
 	}
-  }
-  .table-center {
+}
+
+.table-center {
 	display: table;
 	width: 100%;
 	position: relative;
 	height: 100%;
-  }
-  .table-center > div {
+}
+
+.table-center>div {
 	display: table-cell;
 	vertical-align: middle;
 	position: relative;
 	text-align: center;
-  }
-  .table-center > .motto p {
+}
+
+.table-center>.motto p {
 	color: #fff;
 	text-shadow: 0 0px 5px rgba(0, 0, 0, 0.5);
 	text-transform: uppercase;
@@ -171,5 +191,4 @@ li:nth-child(2) {
 	margin: 10px;
 	font-size: 2em;
 	font-weight: 600;
-  }
-  
+}
