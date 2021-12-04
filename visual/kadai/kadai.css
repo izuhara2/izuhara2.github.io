@@ -3,8 +3,9 @@
 body {
 	/*文字フォントの指定*/
 	font-family: 'M PLUS 1 Code', sans-serif;
+	font-family: 'Yuji Syuku', serif;
 	/*背景色の変更*/
-	background-color: rgb(198, 198, 206);
+	background-color: rgb(247, 180, 149);
 }
 
 h1 {
@@ -13,8 +14,17 @@ h1 {
 	text-align: center;
 }
 
+h2 {
+	font-size: 250%;
+	text-align: center;
+	font-family: 'M PLUS 1 Code', sans-serif;
+	font-family: 'Yuji Syuku', serif;
+}
+
 li {
 	font-size: 250%;
+	font-family: 'M PLUS 1 Code', sans-serif;
+	font-family: 'Yuji Syuku', serif;
 }
 
 .homepage video {
@@ -27,7 +37,7 @@ ul.topnav {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-	background-color: #1b2538;
+	background-color: #000000;
 }
 
 ul.topnav li {
@@ -43,11 +53,11 @@ ul.topnav li a {
 }
 
 ul.topnav li a:hover:not(.active) {
-	background-color: #a9bce2;
+	background-color: #971313;
 }
 
 ul.topnav li a.active {
-	background-color: #da3c41;
+	background-color: #971313;
 }
 
 ul.topnav li.right {
@@ -70,27 +80,87 @@ ul {
 
 li {
 	list-style: none;
-    text-align: center;
+	text-align: center;
 }
 
 li:nth-child(2) {
 	margin: 0 10px;
 }
 
-.meat img{
-    object-fit: cover;
+.meat img {
+	object-fit: cover;
 	width: 100%;
 }
-.grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 26px;
-    margin-top: 6%;
-    margin-bottom: 50px;
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 26px;
+	margin-top: 6%;
+	margin-bottom: 50px;
 }
-.wrap{
-	padding: 0 4%;
+
+/*googlemapのレスポンシブ対応*/
+.googlemap {
+	position: relative;
+	padding-bottom: 75%;
+	height: 0;
+	overflow: hidden;
 }
-p{
-	display: block;
+
+.googlemap iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
+
+/*動画を背景にして文字を乗せる*/
+.container-video {
+	position: relative;
+	height: 600px;
+	overflow: hidden;
+	opacity: 0.01;
+	animation: load 1.5s 0.8s ease-out forwards;
+  }
+  .container-video #video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -1000;
+	overflow: hidden;
+	transform: translate(-50%, -50%) scale(1.05);
+  }
+  
+  @keyframes load {
+	100% {
+	  opacity: 1;
+	}
+  }
+  .table-center {
+	display: table;
+	width: 100%;
+	position: relative;
+	height: 100%;
+  }
+  .table-center > div {
+	display: table-cell;
+	vertical-align: middle;
+	position: relative;
+	text-align: center;
+  }
+  .table-center > .motto p {
+	color: #fff;
+	text-shadow: 0 0px 5px rgba(0, 0, 0, 0.5);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 10px;
+	font-size: 2em;
+	font-weight: 600;
+  }
+  
