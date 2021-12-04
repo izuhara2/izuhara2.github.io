@@ -5,7 +5,7 @@ body {
 	font-family: 'M PLUS 1 Code', sans-serif;
 	font-family: 'Yuji Syuku', serif;
 	/*背景色の変更*/
-	background-color: rgb(247, 180, 149);
+	background-color: rgb(70, 186, 194);
 }
 
 h1 {
@@ -31,6 +31,15 @@ li {
 	width: 100%;
 }
 
+.intro{
+	background-color: #000000;
+	border-style: outset;
+}
+.intro p,h3 {
+	color: #fff;
+	font-size: 150%;
+}
+
 /*メニューの作成*/
 ul.topnav {
 	overflow: hidden;
@@ -44,7 +53,7 @@ ul.topnav li {
 	float: left;
 }
 
-ul.topnav li a {
+ul.topnav li a  {
 	display: block;
 	padding: 14px 16px;
 	text-align: center;
