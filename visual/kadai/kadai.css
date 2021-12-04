@@ -66,13 +66,31 @@ ul.topnav li.right {
 ul {
 	display: flex;
 	justify-content: center;
-    text-align: center;
 }
 
 li {
 	list-style: none;
+    text-align: center;
 }
 
 li:nth-child(2) {
 	margin: 0 10px;
+}
+
+.meat img{
+    object-fit: cover;
+	width: 100%;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 26px;
+    margin-top: 6%;
+    margin-bottom: 50px;
+}
+.wrap{
+	padding: 0 4%;
+}
+p{
+	display: block;
 }
