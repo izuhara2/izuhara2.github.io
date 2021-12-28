@@ -1,0 +1,37 @@
+<!Doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Show message</title>
+</head>
+<form action="/insert-value" method="get">
+	<h2>追加したいポケモンの種族値を入力してください（pokemon_idを登録したいポケモンのポケモン図鑑におけるidと一致させてください）</h2>
+	<p>pokemon_id</p>
+	<input type="text" name="pokeid" >
+<p>HP</p>
+<input type="text" name="pokehp">
+<p>攻撃</p>
+<input type="text" name="pokeA">
+<p>防御</p>
+<input type="text" name="pokeB">
+<p>特攻</p>
+<input type="text" name="pokeC">
+<p>特防</p>
+<input type="text" name="pokeD">
+<p>素早</p>
+<input type="text" name="pokeS">
+<input type="submit" value="登録する">
+</form>
+<br>
+ <a href="/pokemonvalue">ポケモン種族値の確認はこちらから</a>
+ <br>
+ <a href="/pokemondb">ポケモン図鑑の確認はこちらから</a>
+ <br>
+ <a href="/public/delete-value.html">削除はこちらから</a>
+ <br>
+ <a href="https://web20211.izuhara0221.repl.co/">topに戻る</a>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Show message</title>
+</head>
+<body>
+  <h2>ポケモン図鑑</h2>
+  <table border="1">
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>type</th>
+  </tr>
+      <% for( let row of data ) { %>
+        <tr>
+            <td><%= row.id %></td>
+            <td><%= row.name %></td>
+            <td><%= row.type %></td>
+        </tr>
+      <% } %>
+  </table>
+</body>
+<a href="https://web20211.izuhara0221.repl.co/">topに戻る</a>
+</html>

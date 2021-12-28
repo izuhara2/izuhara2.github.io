@@ -1,0 +1,35 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Show message</title>
+</head>
+<body>
+  <h2>種族値データベース</h2>
+  <table border="1">
+  <tr>
+  <td>id</td>
+  <td>pokemon_id</td>
+  <td>HP</td>
+  <td>攻撃</td>
+  <td>防御</td>
+  <td>特攻</td>
+  <td>特防</td>
+  <td>素早</td>
+  </tr>
+      <% for( let row of data ) { %>
+        <tr>
+            <td><%= row.id %></td>
+            <td><%= row.pokemon_id %></td>
+            <td><%= row.HP %></td>
+            <td><%= row.攻撃 %></td>
+            <td><%= row.防御 %></td>
+            <td><%= row.特攻 %></td>
+            <td><%= row.特防 %></td>
+            <td><%= row.素早 %></td>
+        </tr>
+      <% } %>
+  </table>
+  <a href="https://web20211.izuhara0221.repl.co/">topに戻る</a>
+</body>
+</html>
