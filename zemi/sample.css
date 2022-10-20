@@ -7,14 +7,35 @@ h1{
    grid-template-columns: 1fr 1fr;
 }
 
+.layout_middle{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    float: left;
+}
+
+/*ボタン共通*/
 .example1{
-   width: 10%;
+   width: 100px;
+   padding: 20px;
+}
+
+#str{
+    background: aliceblue;
+}
+
+#pau{
+    background: rgb(168, 168, 239);
+}
+
+#cle{
+    background: rgb(235, 156, 156); 
 }
 
 #graph{
-   background-color: aqua;
+   
 }
 
+/*スライダー共通*/
 .slider_sample1{
     width: 75%;
 }

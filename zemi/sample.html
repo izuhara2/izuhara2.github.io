@@ -11,8 +11,8 @@
 <body>
     <div class="title1"><h1>待ち行列問題シミュレータ</h1></div>
     <div class="layout_up"> 
-        <div class="slider1">
-            <h2>窓口の平均処理時間（分）<h2>
+        <div class="left">
+            <h2>窓口の平均処理時間（分）:<div id="processing_time"></div><h2>
             <input type = "range" id = "slider1" class="slider_sample1" min="1" max="10" value="1" list="tickmarks">
             <datalist id="tickmarks">
                 <option value="1"></option>
@@ -26,10 +26,8 @@
                 <option value="9"></option>
                 <option value="10"></option>
             </datalist>
-            <h2><div id="processing_time"></div></h2>
-        </div>
-        <div class="slider2">
-            <h2>処理時間のばらつき（標準偏差）</h2>
+
+            <h2>処理時間のばらつき（標準偏差）:<div id="deviation"></div></h2>
             <input type = "range" id = "slider2" class="slider_sample1" min="0" max="1" value="0" step="0.1" list="tickmarks1">
             <datalist id="tickmarks1">
                 <option value="0"></option>
@@ -44,22 +42,27 @@
                 <option value="0.9"></option>
                 <option value="1.0"></option>
             </datalist>
-            <h2><div id="deviation"></div></h2>
         </div>
-        <div class="slider3">
-            <h2>流れ密度</h2>
+        <div class="right">
+            <h2>流れ密度:<div id="flow"></div></h2>
             <input type = "range" id = "slider3" class="slider_sample1" min="0" max="1.0" value="0" step="0.1" list="tickmarks1">
-            <h2><div id="flow"></div></h2>
-        </div>
-        <div class="graff">
-            <canvas width="500px" height="200px" id="graph"></canvas>
+    
+            <canvas width="550px" height="300px" id="graph"></canvas>
         </div>
     </div>
+
     <div class="layout_middle">
-        <input type="button" value="START" id="str" class="example1">
-        <input type="button" value="PAUSE" id="pau" class="example1">
-        <input type="button" value="CLEAR" id="cle" class="example1">
+        <div id="button_str">
+            <input type="button" value="START" id="str" class="example1">
+        </div>
+        <div id="button_pau">
+            <input type="button" value="PAUSE" id="pau" class="example1">
+        </div>
+        <div id="button_cle">
+            <input type="button" value="CLEAR" id="cle" class="example1">
+        </div>
     </div>
+    
     <div class="animation">
         
     </div>

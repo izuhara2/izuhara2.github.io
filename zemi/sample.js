@@ -15,3 +15,18 @@ slider3.addEventListener('change',()=>{
     var output3 =  document.querySelector( '#flow' );
     output3.innerText = flow;
 });
+
+window.addEventListener("load", function(){
+    var element = document.getElementById('graph');
+    var context = element.getContext('2d');
+    console.log(context);
+    context.beginPath();
+    context.moveTo(25,0);
+    context.lineTo(25,350);
+    context.stroke();
+
+    context.beginPath();
+    context.moveTo(0,280);
+    context.lineTo(500,280);
+    context.stroke();
+});
