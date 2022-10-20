@@ -1,26 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ens">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="sample1018.js" defer></script>
+    <script src="sample.js" defer></script>
+    <link rel="stylesheet" href="sample.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="title">待ち行列問題シミュレータ</div>
-    <div class="slider1">
-        <p>窓口の平均処理時間（秒）</p>
-        <input type = "range" id = "slider1" min="1" max="100">
-        <p>現在の値は<span id=""></span>です．</p>
+    <div class="title1"><h1>待ち行列問題シミュレータ</h1></div>
+    <div class="layout_up"> 
+        <div class="slider1">
+            <h2>窓口の平均処理時間（分）<h2>
+            <input type = "range" id = "slider1" class="slider_sample1" min="1" max="10" value="1" list="tickmarks">
+            <datalist id="tickmarks">
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="4"></option>
+                <option value="5"></option>
+                <option value="6"></option>
+                <option value="7"></option>
+                <option value="8"></option>
+                <option value="9"></option>
+                <option value="10"></option>
+            </datalist>
+            <h2><div id="processing_time"></div></h2>
+        </div>
+        <div class="slider2">
+            <h2>処理時間のばらつき（標準偏差）</h2>
+            <input type = "range" id = "slider2" class="slider_sample1" min="0" max="1" value="0" step="0.1" list="tickmarks1">
+            <datalist id="tickmarks1">
+                <option value="0"></option>
+                <option value="0.1"></option>
+                <option value="0.2"></option>
+                <option value="0.3"></option>
+                <option value="0.4"></option>
+                <option value="0.5"></option>
+                <option value="0.6"></option>
+                <option value="0.7"></option>
+                <option value="0.8"></option>
+                <option value="0.9"></option>
+                <option value="1.0"></option>
+            </datalist>
+            <h2><div id="deviation"></div></h2>
+        </div>
+        <div class="slider3">
+            <h2>流れ密度</h2>
+            <input type = "range" id = "slider3" class="slider_sample1" min="0" max="1.0" value="0" step="0.1" list="tickmarks1">
+            <h2><div id="flow"></div></h2>
+        </div>
+        <div class="graff">
+            <canvas width="500px" height="200px" id="graph"></canvas>
+        </div>
     </div>
-    <div class="slider2">
-        <p>処理時間のばらつき（標準偏差）</p>
-        <input type = "range" id = "slider2" min="1" max="100">
+    <div class="layout_middle">
+        <input type="button" value="START" id="str" class="example1">
+        <input type="button" value="PAUSE" id="pau" class="example1">
+        <input type="button" value="CLEAR" id="cle" class="example1">
     </div>
-    <div class="slider3">
-        <p>流れ密度</p>
-        <input type = "range" id = "slider3" min="1" max="100">
+    <div class="animation">
+        
     </div>
 </body>
 </html>
