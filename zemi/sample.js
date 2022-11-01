@@ -1,20 +1,39 @@
-slider1.addEventListener('change',()=>{
-    var processing = document.querySelector( '#slider1' ).value;
-    var output1 =  document.querySelector( '#processing_time' );
-    output1.innerText = processing;
-});
+/**
+ * スライダとその値を表示する領域を制御するクラス
+ */
+class slider_parameter{
+    /**
+     * コンストラクタ
+     * @param {HTMLInputElement} slider 人間が操作するスライダ
+     * @param {HTMLInputElement} output 値を表示する要素
+     */
+    constructor(slider, output){
+        this.slider = slider;
+        this.output = output;
+        this.slider_value = 0;
+        slider.addEventListener('change',(event)=>{
+            this.slider_value = event.target.value;
+            this.output.innerText = this.slider_value;
+        })
+    }
+}
 
-slider2.addEventListener('change',()=>{
-    var devi = document.querySelector( '#slider2' ).value;
-    var output2 =  document.querySelector( '#deviation' );
-    output2.innerText = devi;
-});
+let slider1 = new slider_parameter(
+    document.querySelector('#slider1'),
+    document.querySelector('#processing_time')
+);
 
-slider3.addEventListener('change',()=>{
-    var flow = document.querySelector( '#slider3' ).value;
-    var output3 =  document.querySelector( '#flow' );
-    output3.innerText = flow;
-});
+let slider2 = new slider_parameter(
+    document.querySelector('#slider2'),
+    document.querySelector('#deviation')
+)
+
+let slider3 = new slider_parameter(
+    document.querySelector('#slider3'),
+    document.querySelector( '#flow' )
+)
+
+
 
 window.addEventListener("load", function(){
     var element = document.getElementById('graph');
