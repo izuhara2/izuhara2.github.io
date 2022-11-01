@@ -30,3 +30,4 @@ window.addEventListener("load", function(){
     context.lineTo(500,280);
     context.stroke();
 });
+
